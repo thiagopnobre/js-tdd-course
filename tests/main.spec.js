@@ -72,4 +72,9 @@ describe('FizzBuzz', () => {
     expect(fizzBuzz(15)).to.be.equal('FizzBuzz');
     expect(fizzBuzz(30)).to.be.equal('FizzBuzz');
   });
+
+  it('should return the when non-multiple of 3 and/or 5', () => {
+    expect(fizzBuzz(7)).to.be.equal(7);
+    expect(fizzBuzz(13)).to.be.equal(13);
+  });
 });
