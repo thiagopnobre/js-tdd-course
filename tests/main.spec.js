@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { sum, sub, mult, div } from '../src/main';
+import { sum, sub, mult, div, fizzBuzz } from '../src/main';
 
 describe('Calc', () => {
   describe('Smoke tests', () => {
@@ -54,5 +54,27 @@ describe('Calc', () => {
     it('should return `Não é possível divisão por zero!` when divide by 0', () => {
       expect(div(4, 0)).to.be.equal('Não é possível divisão por zero!');
     });
+  });
+});
+
+describe('FizzBuzz', () => {
+  it('should return `Fizz` when multiple of 3', () => {
+    expect(fizzBuzz(3)).to.be.equal('Fizz');
+    expect(fizzBuzz(6)).to.be.equal('Fizz');
+  });
+
+  it('should return `Buzz` when multiple of 5', () => {
+    expect(fizzBuzz(5)).to.be.equal('Buzz');
+    expect(fizzBuzz(10)).to.be.equal('Buzz');
+  });
+
+  it('should return `FizzBuzz` when multiple of 3 and 5', () => {
+    expect(fizzBuzz(15)).to.be.equal('FizzBuzz');
+    expect(fizzBuzz(30)).to.be.equal('FizzBuzz');
+  });
+
+  it('should return the when non-multiple of 3 and/or 5', () => {
+    expect(fizzBuzz(7)).to.be.equal(7);
+    expect(fizzBuzz(13)).to.be.equal(13);
   });
 });
