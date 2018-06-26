@@ -67,4 +67,9 @@ describe('FizzBuzz', () => {
     expect(fizzBuzz(5)).to.be.equal('Buzz');
     expect(fizzBuzz(10)).to.be.equal('Buzz');
   });
+
+  it('should return `FizzBuzz` when multiple of 3 and 5', () => {
+    expect(fizzBuzz(15)).to.be.equal('FizzBuzz');
+    expect(fizzBuzz(30)).to.be.equal('FizzBuzz');
+  });
 });
